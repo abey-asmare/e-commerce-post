@@ -26,7 +26,7 @@ type useProductListingStoreType = {
 };
 
 export const useProductListingStore = create<useProductListingStoreType>(
-  (set, get) => ({
+  (set) => ({
     products: null,
     error: null,
     loading: false,

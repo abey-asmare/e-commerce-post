@@ -9,12 +9,13 @@ function LandingPage() {
     getAllProducts();
   }, []);
 
+
   if (loading) {
     return (
       <div className="px-2 md:px-14 lg:m-auto">
         <div className="products-container flex flex-wrap justify-center gap-2 md:gap-5">
           {Array.from({ length: 16 }).map((_, index) => (
-            <LargeProductCard key={index} skeleton={loading}></LargeProductCard>
+              <LargeProductCard key={index} skeleton={loading}></LargeProductCard>
           ))}
         </div>
       </div>
@@ -35,10 +36,10 @@ function LandingPage() {
         {products?.map((product: ProductType) => (
           <a href={`products/${product.id}`}>
             <LargeProductCard
-              key={product.id}
-              product={product}
-              skeleton={loading}
-            ></LargeProductCard>
+            key={product.id}
+            product={product}
+            skeleton={loading}
+          ></LargeProductCard>
           </a>
         ))}
       </div>
